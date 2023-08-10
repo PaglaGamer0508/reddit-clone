@@ -18,7 +18,7 @@ const MiniCreatePost: React.FC<MiniCreatePostProps> = ({ session }) => {
 
   return (
     <>
-      <li className="overflow-hidden rounded-md bg-white shadow">
+      <li className="overflow-hidden rounded-md bg-white shadow list-none">
         <div className="h-full px-6 py-4 flex justify-between gap-6">
           <div className="relative h-fit">
             <UserAvatar
@@ -41,16 +41,15 @@ const MiniCreatePost: React.FC<MiniCreatePostProps> = ({ session }) => {
             onClick={() => router.push(pathname + "/submit")}
             variant="ghost"
           >
-            <ImageIcon  className="text-zinc-600"/>
+            <ImageIcon className="text-zinc-600" />
           </Button>
 
           <Button
             onClick={() => router.push(pathname + "/submit")}
             variant="ghost"
-          >  
-            <Link2  className="text-zinc-600"/>
+          >
+            <Link2 className="text-zinc-600" />
           </Button>
-
         </div>
       </li>
     </>
