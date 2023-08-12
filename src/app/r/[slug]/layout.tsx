@@ -1,9 +1,11 @@
 import NotFoundPage from "@/components/NotFoundPage";
 import SubscribeLeaveToggle from "@/components/SubscribeLeaveToggle";
+import { buttonVariants } from "@/components/ui/Button";
 import { getAuthSession } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { format } from "date-fns";
 import type { Metadata } from "next";
+import { format } from "date-fns";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 export const metadata: Metadata = {
@@ -100,6 +102,15 @@ const Layout = async ({
                   isSubscribed={isSubscribed}
                 />
               ) : null}
+              <Link
+                className={buttonVariants({
+                  variant: "outline",
+                  className: "w-full mb-6",
+                })}
+                href={`r/${slug}/submit`}
+              >
+                Create Post
+              </Link>
             </dl>
           </div>
         </div>
