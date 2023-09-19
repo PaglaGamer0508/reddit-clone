@@ -1,6 +1,6 @@
 'use client'
 
-import EditorJS from '@editorjs/editorjs'
+import type EditorJS from '@editorjs/editorjs'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { usePathname, useRouter } from 'next/navigation'
 import { useCallback, useEffect, useRef, useState } from 'react'
@@ -200,7 +200,7 @@ export const Editor: React.FC<EditorProps> = ({ subredditId }) => {
             placeholder='Title'
             className='w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none'
           />
-          <div id='editor' className='min-h-[500px]' />
+          <div id='editor' className='min-h-[400px]' />
           <p className='text-sm text-gray-500'>
             Use{' '}
             <kbd className='rounded-md border bg-muted px-1 text-xs uppercase'>
